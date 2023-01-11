@@ -1,0 +1,42 @@
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding: 150px 0;
+    img{
+        cursor: pointer;
+    }
+    a{
+        cursor: pointer;
+        color: #fff;
+    }
+    &__container{
+        @include d-flex(row, center, space-between, 100px);
+    }
+    &__main{
+        @include d-flex(column, flex-start, space-between, 50px);
+    }
+    &__icon{
+        @include d-flex(0, center, space-between, 20px)
+    }
+    &__logo{
+        @include h-property(70px, 38px, 300);
+    }
+    &__link{
+        @include d-flex(0, 0, 0, 40px);
+        a{
+            &:hover{
+                border-bottom: 1px solid white;
+                transition: 0.3;
+            }
+        }
+        &--items{
+            @include d-flex(column, flex-start, space-between, 20px);
+        }
+        &--item{
+            @include d-flex(column, flex-start, space-between, 4px);
+        }
+        &--title{
+            @include h-property(40px, 38px, 300)
+        }
+    }
+}

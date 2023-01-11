@@ -1,0 +1,129 @@
+.main{
+    text-align: center;
+    @include d-flex(column, center, space-between);
+    @include h-property;
+    height: 100vh;
+    background-image: url(../img/section/main.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+    &__container{
+        @include d-flex(column, center, space-between);
+        padding-top: 200px;
+        color: #fff;
+    }
+    &__title{
+        @include h-property(90px, 70px, 700);
+    }
+    &__img{
+        @include d-flex;
+        cursor: pointer;
+    }
+}
+
+.made{
+    margin-top: 100px;
+    @include d-flex(row, center, flex-start, 90px);
+    &__text{
+        width: 300px;
+        @include d-flex(column, flex-start, 60px);
+        &--title{
+            @include h-property(40px, 38px, 700);
+        }
+        &--item{
+            @include h-property;
+        }
+        &--btn{
+            @include h-property;
+            @include btn;
+        }
+    }
+    img{
+        width: 500px;
+    }
+}
+
+.popular{
+    margin-top: 100px;
+    background-color: #f6f5f5;
+    padding: 100px 0;
+    &__container{
+        @include d-flex(column, center, flex-start, 50px);
+    }
+    &__title{
+        @include h-property(40px, 38px, 700);
+    }
+    &__boxes{
+        @include d-flex(row, center,space-between, 80px);
+        img{
+            width: 100%;
+        }
+        span{
+            &::before{
+                content: "$";
+            }
+        }
+    }
+    &__box{
+        @include d-flex(column, flex-start,space-between, 20px);
+        @include h-property();
+        &--price{
+            @include d-flex(row, center, space-between);
+            @include h-property(30px);
+            width: 100%;
+            &__mob{
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+    &__btn{
+        @include h-property;
+        @include btn;
+        background-color: #f6f5f5;
+    }
+}
+
+.food{
+    img{
+        width: 50%;
+    }
+    &__container{
+        margin-top: 100px;
+        @include d-flex(column);
+    }
+    &__family{
+        @include d-flex(row, center, flex-start, 100px);
+        &--title{
+            @include h-property(40px, 45px, 300);
+            margin-bottom: 40px;
+        }
+        &--item{
+            @include h-property;
+        }
+    }
+   
+}
+
+.table{
+    margin-top: 100px;
+    background-color: #f6f5f5;
+    padding: 100px 0;
+    &__container{
+        @include d-flex(column, center, space-between, 50px);
+    }
+    &__title{
+        @include h-property(40px, 38px, 700);
+    }
+    &__text{
+        @include h-property;
+        width: 500px;
+    }
+    &__btn{
+        @include btn;
+        @include h-property;
+    }
+}

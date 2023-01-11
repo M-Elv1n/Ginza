@@ -1,0 +1,149 @@
+@media only screen and (max-width: 1199px){
+    .container{
+        max-width: 900px;
+        margin: auto;
+    }
+    .made{
+        padding-top: 100px;
+    }
+    .footer{
+        &__container{
+            @include d-flex(column, center, space-between, 100px);
+        }
+        &__link{
+            @include d-flex(column, flex-start, 0, 40px);
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .container{
+        max-width: 700px;
+        margin: auto;
+    }
+    .header{
+        &__mob{
+            @include d-flex(0, 0, space-between);
+            width: 100%;
+            padding: 0 30px;
+            img{
+                cursor: pointer;
+            }
+        }
+        &__menu{
+            display: none;
+        }
+    }
+    .main{
+        @include d-flex(column, center, space-between, 5px);
+        &__title{
+            @include h-property(70px, 100px, 500);
+        }
+        &__img{
+            @include d-flex(0, 0, space-between, 200px);
+        }
+    }
+    .made{
+        @include d-flex(column-reverse, center, flex-start, 90px);
+        &__text{
+            @include d-flex(column, flex-start, flex-start, 30px);
+            &--title{
+                @include h-property(40px, 50px, 400);
+            }
+        }
+    }
+    .popular{
+        &__boxes{
+            @include d-flex(column,center,space-between, 80px);
+            img{
+                width: 500px;
+            }
+        }
+        &__box{
+            &--text{
+                width: 500px;
+            }
+            &--price{
+                @include d-flex(column, flex-start, space-between);
+                &__mob{
+                    span{
+                        display: block;
+                        @include h-property(30px);
+                    }
+                }
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+    .food{
+        img{
+            width: 100%
+        }
+        &__container{
+            @include d-flex(column, flex-start, flex-start);
+        }
+        &__family{
+            @include d-flex(column-reverse, flex-start, flex-start, 100px);
+            &--item{
+                width: 400px
+            }
+            &--food{
+                @include d-flex(column-reverse);
+            }
+        }
+    }
+    .table{
+        &__title{
+            @include h-property(40px, 38px, 300);
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: 300px;
+        margin: auto;
+    }
+    .main{
+        &__container{
+            padding-top: 0;
+        }
+        &__title{
+            @include h-property(34px, 50px, 300);
+        }
+        &__img{
+            @include d-flex(0, 0, space-between, 50px);
+        }
+    }
+    .made{
+        img{
+            width: 98%;
+        }
+    }
+    .popular{
+        img{
+            width: 90%;
+        }
+        &__box{
+            &--text{
+                width: 90%;
+            }
+        }
+        &__title{
+            @include h-property(40px, 38px, 300);
+        }
+    }
+    .food{
+        width: 80%;
+    }
+    .table{
+        &__title{
+            @include h-property(30px, 28px, 300);
+        }
+        &__text{
+            width: 300px;
+        }
+    }
+}

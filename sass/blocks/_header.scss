@@ -1,0 +1,25 @@
+.header{
+    &__menu{
+        @include d-flex(column, center);
+        &--title{
+            a{
+                @include h-property(30px, 20px);
+                cursor: pointer;
+                color: #fff
+            }
+        }
+        &--list{
+            @include d-flex;
+            a{
+                color: #fff;
+                &:hover{
+                    transition: 0.5s;
+                    border-bottom: 1px solid white;
+                }
+            }
+        }
+    }
+    &__mob{
+        display: none;
+    }
+}
